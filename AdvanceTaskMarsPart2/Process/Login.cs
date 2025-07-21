@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Process
 {
-    internal class Login
+    public class Login
     {
     }
 }
