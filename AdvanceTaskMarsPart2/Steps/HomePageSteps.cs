@@ -1,14 +1,12 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdvanceTaskMarsPart2.Hooks
+namespace AdvanceTaskMarsPart2.Steps
 {
-    
-    public class Hooks 
+    internal class HomePageSteps
     {
     }
 }
