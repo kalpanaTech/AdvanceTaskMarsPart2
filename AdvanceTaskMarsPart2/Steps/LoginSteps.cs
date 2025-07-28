@@ -12,13 +12,9 @@ namespace AdvanceTaskMarsPart2.Process
     public class LoginSteps : Hooks
     {
 
-        LoginComponent loginComponentObj;
-        JsonHelper jsonHelperObj;
-        public LoginSteps()
-        {
-            loginComponentObj = new LoginComponent();
-            jsonHelperObj = new JsonHelper();
-        }
+        LoginComponent loginComponentObj = new LoginComponent();
+        JsonHelper jsonHelperObj = new JsonHelper();
+       
         public void LoginProcess(LoginCredentials data)
         {
             loginComponentObj.LoginAction(data);

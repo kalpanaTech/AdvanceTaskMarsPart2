@@ -12,8 +12,8 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
     [Binding]
     public class LoginFeatureStepDefinitions : Hooks
     {
-        private MainPage hostPageObj = new MainPage();
-        private LoginSteps loginObj = new LoginSteps();
+        private MainPage mainPageObj = new MainPage();
+        private LoginSteps loginStepsObj = new LoginSteps();
         private LoginAssertions loginAssertionsObj = new LoginAssertions();
 
         private ExtentTest testreport;
@@ -21,7 +21,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         [Given(@"User is on the login page")]
         public void GivenUserIsOnTheLoginPage()
         {
-            hostPageObj.ClickSignIn();
+            mainPageObj.ClickSignIn();
         }
 
         [When(@"User enter valid email and password from the json file located at ""([^""]*)""")]
@@ -32,7 +32,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
             foreach (var data in LoginData)
             {
                
-                loginObj.LoginProcess(data);
+                loginStepsObj.LoginProcess(data);
             }
         }
 

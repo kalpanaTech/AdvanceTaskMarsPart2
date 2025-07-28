@@ -1,4 +1,5 @@
-﻿using AventStack.ExtentReports;
+﻿using AdvanceTaskMarsPart2.Steps;
+using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -19,6 +20,8 @@ namespace AdvanceTaskMarsPart2.Utilities
         private static ExtentTest feature;
         private static ExtentTest scenario;
         private static ExtentSparkReporter htmlReporter;
+        private static ExtentTest test;
+        
 
         [BeforeTestRun]
         public static void InitializeReport()
@@ -56,6 +59,8 @@ namespace AdvanceTaskMarsPart2.Utilities
         public void BeforeScenario(ScenarioContext scenarioContext)
         {
             scenario = feature.CreateNode(scenarioContext.ScenarioInfo.Title);
+            ReportManager.SetTest(scenario);
+          
         }
 
         [AfterScenario]

@@ -1,0 +1,16 @@
+﻿[
+  {
+    "college": "Cambridge",
+    "country": "United Kingdom",
+    "title": "B.A",
+    "degree": "Computer Science",
+    "year": "2021"
+  },
+  {
+    "college": "CSA",
+    "country": "United Kingdom",
+    "title": "BFA",
+    "degree": "Computer Science",
+    "year": "2018"
+  }
+]

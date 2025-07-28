@@ -15,7 +15,7 @@ namespace AdvanceTaskMarsPart2.Pages
         private static readonly By profileTabLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/a[2]");
         private static readonly By manageListingsLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/a[3]");
         private static readonly By manageRequestsLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/div[1]");
-        private static readonly By descriptionLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/div/h3");
+        private static readonly By descriptionLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i");
         
         
 
@@ -95,6 +95,33 @@ namespace AdvanceTaskMarsPart2.Pages
         {
             UserCheckingComponentRendering();
             return userChecking.Text;
+        }
+
+        public void ProfileTabClick()
+        {
+            ProfileTabComponentRendering();
+            profileTab.Click();
+        }
+
+        public void UserCheckingOptionClick()
+        {
+            UserCheckingComponentRendering();
+            userChecking.Click();
+        }
+        public void ManageListingsTabClick()
+        {
+            ManageListingsComponentRendering();
+            manageListings.Click();
+        }
+        public void ManageRequestsTabClick()
+        {
+            ManageRequestsComponentRendering();
+            manageRequests.Click();
+        }
+        public void DescriptionIconClick()
+        {
+            DescriptionComponentRendering();
+            description.Click();
         }
 
 
