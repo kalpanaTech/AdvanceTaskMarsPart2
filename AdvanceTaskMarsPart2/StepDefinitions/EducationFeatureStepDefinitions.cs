@@ -21,13 +21,13 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
 
         private ExtentTest testreport;
 
-
-        [Given(@"User navigate to education tab")]
-        public void GivenUserNavigateToEducationTab()
+        [Then(@"User navigate to education tab")]
+        public void ThenUserNavigateToEducationTab()
         {
             homePageStepsObj.ClickOnProfileTab();
             profileMenuTabsComponentsObj.ClickEducationTab();
         }
+
 
         [When(@"User enter education details from the json file located at ""([^""]*)""")]
         public void WhenUserEnterEducationDetailsFromTheJsonFileLocatedAt(string jsonFilePath)
@@ -37,8 +37,6 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
             foreach (var data in EducationAddTestData)
             {
                 educationStepsObj.AddEducation(data);
-
-
             }
         }
 

@@ -91,6 +91,9 @@ namespace AdvanceTaskMarsPart2.Features
 #line 9
  testRunner.Then("Remove existing certification data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 10
+ testRunner.Then("User navigate to certification tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -100,7 +103,7 @@ namespace AdvanceTaskMarsPart2.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 - User enter certification details successfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -112,9 +115,6 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line hidden
-#line 12
- testRunner.Given("User navigate to certification tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
  testRunner.When("User enter certification details from the json file located at \"C:\\repo\\AdvanceTa" +
@@ -149,14 +149,11 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 17
- testRunner.Given("User navigate to certification tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 18
  testRunner.When("User enter certification details to delete from the json file located at \"C:\\repo" +
                         "\\AdvanceTaskMarsPart2\\AdvanceTaskMarsPart2\\AdvanceTaskMarsPart2\\JsonTestData\\Cer" +
                         "tificationDeleteTestData.json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 19
+#line 18
  testRunner.Then("User should be able to successfully delete certification details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -20,22 +20,22 @@ namespace AdvanceTaskMarsPart2.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("EducationFeature")]
-    public partial class EducationFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("PasswordFeature")]
+    public partial class PasswordFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "EducationFeature.feature"
+#line 1 "PasswordFeature.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "EducationFeature", "User can Add, Delete education details.", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "PasswordFeature", "User can change password.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -89,21 +89,18 @@ namespace AdvanceTaskMarsPart2.Features
  testRunner.Then("User should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 8
- testRunner.Then("Remove existing education data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 9
- testRunner.Then("User navigate to education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("User navigate to change password option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01 - User enter education details successfully")]
-        public void _01_UserEnterEducationDetailsSuccessfully()
+        [NUnit.Framework.DescriptionAttribute("01 - User change password successfully")]
+        public void _01_UserChangePasswordSuccessfully()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 - User enter education details successfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 - User change password successfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -116,26 +113,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 12
- testRunner.When("User enter education details from the json file located at \"C:\\repo\\AdvanceTaskMa" +
-                        "rsPart2\\AdvanceTaskMarsPart2\\AdvanceTaskMarsPart2\\JsonTestData\\EducationAddTestD" +
-                        "ata.json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.When("User enter passwords from the json file located at \"C:\\repo\\AdvanceTaskMarsPart2\\" +
+                        "AdvanceTaskMarsPart2\\AdvanceTaskMarsPart2\\JsonTestData\\PasswordChangeTestData.js" +
+                        "on\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
- testRunner.Then("User should be able to successfully add education details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.Then("User should be able to successfully change the password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("02 - User delete education details successfully")]
-        public void _02_UserDeleteEducationDetailsSuccessfully()
+        [NUnit.Framework.DescriptionAttribute("02 - User add invalid data to change password")]
+        public void _02_UserAddInvalidDataToChangePassword()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 - User delete education details successfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 15
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 - User add invalid data to change password", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 14
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -148,13 +145,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 16
- testRunner.When("User enter education details to delete from the json file located at \"C:\\repo\\Adv" +
-                        "anceTaskMarsPart2\\AdvanceTaskMarsPart2\\AdvanceTaskMarsPart2\\JsonTestData\\Educati" +
-                        "onDeleteTestData.json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.When("User enter invalid passwords from the json file located at \"C:\\repo\\AdvanceTaskMa" +
+                        "rsPart2\\AdvanceTaskMarsPart2\\AdvanceTaskMarsPart2\\JsonTestData\\PasswordChangeInv" +
+                        "alidTestData.json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
- testRunner.Then("User should be able to successfully delete education details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+ testRunner.Then("User should be able to test invalid passwords", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

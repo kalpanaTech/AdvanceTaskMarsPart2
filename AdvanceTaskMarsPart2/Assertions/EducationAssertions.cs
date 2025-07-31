@@ -13,92 +13,86 @@ namespace AdvanceTaskMarsPart2.Assertions
 {
     public class EducationAssertions : Hooks
     {
-        private static readonly By toastMessageLocator = By.XPath("//div[@class = 'ns-box-inner']");
-        private static IWebElement toastMessage;
-
+        
         private static readonly By cancelButtonLocator = By.XPath("//input[@value='Cancel']");
         private static IWebElement cancelButton;
 
+        
         private static string AddEduMessage = "Education has been added";
-        private static string UpdateEduMessage = "Education as been updated";
+        private static string UpdateEduMessage = "Education has been updated"; // fixed typo
         private static string DeleteEduMessage = "Education entry successfully removed";
-        private static string AddExsistingEduMessage = "This information is already exist.";
+        private static string AddExistingEduMessage = "This information is already exist.";
         private static string AddInvalidEduMessage = "Please enter all the fields";
-        private static string UndefinedMessage = "undefined";
 
+        
         public void AddEducationAssertions()
         {
             var test = ReportManager.GetTest();
-            try
+
+            
+            string displayedMessage = ToastMessageHelper.VerifyToastMessage(driver,
+                AddEduMessage,
+                AddInvalidEduMessage,
+                AddExistingEduMessage);
+
+            if (displayedMessage == AddInvalidEduMessage || displayedMessage == AddExistingEduMessage)
             {
-                Wait.WaitToBeVisible(driver, toastMessageLocator, 10);
-                toastMessage = driver.FindElement(toastMessageLocator);
-
-                string displayedMessage = toastMessage.Text;
-                Console.WriteLine(displayedMessage);
-
-
-                Assert.That(displayedMessage, Is.EqualTo(AddEduMessage)
-                    .Or.EqualTo(AddInvalidEduMessage)
-                    .Or.EqualTo(AddExsistingEduMessage));
-                    
-
-                if ((displayedMessage == AddInvalidEduMessage) ||
-                    (displayedMessage == AddExsistingEduMessage))
-                    
-                {
-                    test.Pass("Entered invalid education data : " + displayedMessage);
-                    cancelButton = driver.FindElement(cancelButtonLocator);
-                    cancelButton.Click();
-                }
-                else if (displayedMessage == AddEduMessage)
-                {
-                    test.Pass("Education added successfully : " + displayedMessage);
-
-                }
-                else
-                {
-                    test.Fail("Education add Failed");
-
-                }
+                test.Pass("Entered invalid education data: " + displayedMessage);
+                cancelButton = driver.FindElement(cancelButtonLocator);
+                cancelButton.Click();
             }
-            catch (WebDriverTimeoutException ex)
+            else if (displayedMessage == AddEduMessage)
             {
-                throw new Exception("Toast message did not appear in the expected time.", ex);
+                test.Pass("Education added successfully: " + displayedMessage);
+            }
+            else
+            {
+                test.Fail("Unexpected add education message: " + displayedMessage);
             }
         }
 
+        
+        public void UpdateEducationAssertions()
+        {
+            var test = ReportManager.GetTest();
+
+            string displayedMessage = ToastMessageHelper.VerifyToastMessage(driver,
+                UpdateEduMessage,
+                AddInvalidEduMessage);
+
+            if (displayedMessage == UpdateEduMessage)
+            {
+                test.Pass("Education updated successfully: " + displayedMessage);
+            }
+            else if (displayedMessage == AddInvalidEduMessage)
+            {
+                test.Pass("Invalid update data: " + displayedMessage);
+                cancelButton = driver.FindElement(cancelButtonLocator);
+                cancelButton.Click();
+            }
+            else
+            {
+                test.Fail("Unexpected update education message: " + displayedMessage);
+            }
+        }
+
+        
         public void DeleteEducationAssertions()
         {
             var test = ReportManager.GetTest();
-            try
+
+            string displayedMessage = ToastMessageHelper.VerifyToastMessage(driver,
+                DeleteEduMessage);
+
+            if (displayedMessage == DeleteEduMessage)
             {
-                Wait.WaitToBeVisible(driver, toastMessageLocator, 10);
-                toastMessage = driver.FindElement(toastMessageLocator);
-
-                string displayedMessage = toastMessage.Text;
-                Console.WriteLine(displayedMessage);
-
-                string deleteLangMessage = "Education entry successfully removed";
-
-                Assert.That(displayedMessage, Is.EqualTo(deleteLangMessage));
-
-                if (displayedMessage == deleteLangMessage)
-                {
-                    test.Pass("Language deleted successfully: " + displayedMessage);
-                    
-                }
-                else
-                {
-                    test.Fail("Language delete failed or unexpected message: " + displayedMessage);
-                }
+                test.Pass("Education deleted successfully: " + displayedMessage);
             }
-            catch (WebDriverTimeoutException ex)
+            else
             {
-                throw new Exception("Toast message did not appear in the expected time.", ex);
+                test.Fail("Unexpected delete education message: " + displayedMessage);
             }
         }
-
 
 
     }

@@ -25,12 +25,13 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
 
         private ExtentTest testreport;
 
-        [Given(@"User navigate to certification tab")]
-        public void GivenUserNavigateToCertificationTab()
+        [Then(@"User navigate to certification tab")]
+        public void ThenUserNavigateToCertificationTab()
         {
             homePageStepsObj.ClickOnProfileTab();
             profileMenuTabsComponentsObj.ClickCertificationTab();
         }
+
 
         [When(@"User enter certification details from the json file located at ""([^""]*)""")]
         public void WhenUserEnterCertificationDetailsFromTheJsonFileLocatedAt(string jsonFilePath)
@@ -40,8 +41,6 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
             foreach (var data in testData)
             {
                 certificationStepsObj.AddCertification(data);
-
-
             }
         }
 
