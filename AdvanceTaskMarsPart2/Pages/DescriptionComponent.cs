@@ -40,7 +40,7 @@ namespace AdvanceTaskMarsPart2.Pages
        
         public void DeleteDescriptionActions(DescriptionCredentials data)
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(000);
             DescriptionComponentRendering();
             enterDescription.SendKeys(Keys.Control + "A");
             enterDescription.SendKeys(Keys.Delete);

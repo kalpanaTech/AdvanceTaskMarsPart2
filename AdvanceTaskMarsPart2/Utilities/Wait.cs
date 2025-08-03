@@ -24,5 +24,10 @@ namespace AdvanceTaskMarsPart2.Utilities
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(xpath));
 
         }
+        public static void WaitUntilToggleState(IWebDriver driver, IWebElement toggleInput, bool expectedState, int seconds)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
+            wait.Until(d => toggleInput.Selected == expectedState);
+        }
     }
 }

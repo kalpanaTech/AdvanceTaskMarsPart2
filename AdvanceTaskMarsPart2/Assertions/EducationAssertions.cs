@@ -19,7 +19,7 @@ namespace AdvanceTaskMarsPart2.Assertions
 
         
         private static string AddEduMessage = "Education has been added";
-        private static string UpdateEduMessage = "Education has been updated"; // fixed typo
+        private static string UpdateEduMessage = "Education has been updated"; 
         private static string DeleteEduMessage = "Education entry successfully removed";
         private static string AddExistingEduMessage = "This information is already exist.";
         private static string AddInvalidEduMessage = "Please enter all the fields";
