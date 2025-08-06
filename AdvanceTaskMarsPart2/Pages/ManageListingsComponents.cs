@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Model;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Utilities;
 using AventStack.ExtentReports.Model;
 using OpenQA.Selenium;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class ManageListingsComponents : Hooks
+    public class ManageListingsComponents : Base
     {
 
         private static readonly By deleteIconLocator = By.XPath("//*[@id=\"listing-management-section\"]/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[8]/div/button[3]/i");
@@ -86,12 +87,6 @@ namespace AdvanceTaskMarsPart2.Pages
 
                 Wait.WaitToBeVisible(driver, viewIconLocator, 5);
                 viewIcon = driver.FindElement(viewIconLocator);
-
-                Wait.WaitToBeVisible(driver, toggleContainerLocator, 10);
-                toggleContainer = driver.FindElement(toggleContainerLocator);
-
-                Wait.WaitToBeVisible(driver, toggleInputLocator, 10);
-                toggleInput = driver.FindElement(toggleInputLocator);
 
             }
             catch (Exception ex)

@@ -1,4 +1,5 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Steps;
@@ -10,7 +11,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class ManageSentRequestsStepDefinitions : Hooks
+    public class ManageSentRequestsStepDefinitions : Base
     {
         
         ManageRequestsTabComponents manageRequestsTabComponentsObj = new ManageRequestsTabComponents();
@@ -20,7 +21,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         private List<SentRequestCredentials> reviewTestData = new List<SentRequestCredentials>();
 
 
-        private ExtentTest testreport;
+        
 
         [Then(@"User navigate to sent requests option")]
         public void ThenUserNavigateToSentRequestsOption()

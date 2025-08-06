@@ -1,4 +1,5 @@
 ﻿using AdvanceTaskMarsPart2.Steps;
+using AdvanceTaskMarsPart2.Utilities;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
@@ -9,64 +10,24 @@ using System;
 using System.IO;
 using TechTalk.SpecFlow;
 
-namespace AdvanceTaskMarsPart2.Utilities
+namespace AdvanceTaskMarsPart2.Hooks
 {
     [Binding]
-    public class Hooks : Driver
+    public class Hooks : Base
     {
-        public static IWebDriver driver;
-
-        public static ExtentReports extent;
-        public static ExtentTest feature;
-        //public static ExtentTest scenario;
-        //public static ExtentSparkReporter htmlReporter;
-        public static ExtentTest test;
-        
-
-        [BeforeTestRun]
-        public static void InitializeReport()
-        {
-            var reportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reports", "ExtentReport.html");
-            var htmlReporter = new ExtentSparkReporter(reportPath);
-
-            extent = new ExtentReports();
-            extent.AttachReporter(htmlReporter);
-        }
-
-        [AfterTestRun]
-        public static void FlushReport()
-        {
-            extent.Flush();
-        }
-
-        [BeforeFeature]
-        public static void BeforeFeature(FeatureContext featureContext)
-        {
-            feature = extent.CreateTest(featureContext.FeatureInfo.Title);
-
-            driver = InitializeDriver("chrome");
-            driver.Navigate().GoToUrl("http://localhost:5003/");
-           
-        }
-
-        [AfterFeature]
-        public static void AfterFeature()
-        {
-            driver.Quit();
-        }
-
         [BeforeScenario]
-        public void BeforeScenario(ScenarioContext scenarioContext)
+        public void BeforeScenarioWithTag()
         {
-            test = feature.CreateNode(scenarioContext.ScenarioInfo.Title);
-            ReportManager.SetTest(test);
-          
+            SetupAuction();
+
         }
+
+        
 
         [AfterScenario]
         public void AfterScenario()
         {
-            var outcome = TestContext.CurrentContext.Result.Outcome.Status;
+           /* var outcome = TestContext.CurrentContext.Result.Outcome.Status;
 
             if (outcome == TestStatus.Failed)
             {
@@ -93,8 +54,11 @@ namespace AdvanceTaskMarsPart2.Utilities
             else
             {
                 test.Pass("Test passed");
-            }
+            } */
+
+            TearDownAction();
         }
+
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Model;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Steps;
 using AdvanceTaskMarsPart2.Utilities;
@@ -10,13 +11,14 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class ManageListingsAssertions : Hooks
+    public class ManageListingsAssertions : Base
     {
         
         private static string DeleteManageListingsFailedMessage = "Unable to delete listing. Pending or Accepted skill trade requests exist.";
         private static string RequestSentMessage = "Request sent";
         private static string ServiceActivatedMessage = "Service has been activated";
         private static string ServiceDeactivatedMessage = "Service has been deactivated";
+
 
         public void VerifyViewManageListings()
         {
@@ -44,7 +46,7 @@ namespace AdvanceTaskMarsPart2.Assertions
             }
             else
             {
-                test.Fail($"Edit Manage Listings Failed");
+                test.Fail("Edit Manage Listings Failed");
             }
         }
         public void VerifyManageListingsDelete()

@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class ManageReceivedRequestComponents : Hooks
+    public class ManageReceivedRequestComponents : Base
     {
         private static readonly By receivedRequestStatusLocator = By.XPath("//*[@id=\"received-request-section\"]/div[2]/div[1]/table/tbody/tr[1]/td[5]");
         private static readonly By receivedRequestAcceptButtonLocator = By.XPath("//*[@id=\"received-request-section\"]/div[2]/div[1]/table/tbody/tr[1]/td[8]/button[1]");

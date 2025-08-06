@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using CompetionTaskMars.Model;
 using OpenQA.Selenium;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class ProfileEducationOverviewComponent : Hooks
+    public class ProfileEducationOverviewComponent : Base
     {
         private static readonly By addNewEducationButtonLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/thead/tr/th[6]/div");
         private static readonly By collegeTextBoxLocator = By.XPath("//input[@type = 'text' and @placeholder = 'College/University Name']");

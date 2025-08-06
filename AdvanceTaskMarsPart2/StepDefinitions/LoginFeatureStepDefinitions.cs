@@ -1,4 +1,5 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Process;
 using AdvanceTaskMarsPart2.TestModel;
@@ -10,7 +11,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class LoginFeatureStepDefinitions : Hooks
+    public class LoginFeatureStepDefinitions : Base
     {
         private MainPage mainPageObj = new MainPage();
         private LoginSteps loginStepsObj = new LoginSteps();

@@ -1,5 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Model;
-using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Model;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class DescriptionComponent : Hooks
+    public class DescriptionComponent : Base
     {
         private IWebElement enterDescription;
         private IWebElement saveButton;

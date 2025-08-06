@@ -1,4 +1,5 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Steps;
 using AdvanceTaskMarsPart2.TestModel;
@@ -11,7 +12,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class EducationFeatureStepDefinitions : Hooks
+    public class EducationFeatureStepDefinitions : Base
     {
         ProfileMenuTabsComponents profileMenuTabsComponentsObj = new ProfileMenuTabsComponents();
         HomePageSteps homePageStepsObj = new HomePageSteps();

@@ -1,7 +1,7 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Steps;
-using AdvanceTaskMarsPart2.Utilities;
 using AventStack.ExtentReports;
 using System;
 using TechTalk.SpecFlow;
@@ -9,7 +9,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class ManageRequestsStepDefinitions : Hooks
+    public class ManageRequestsStepDefinitions : Base
     {
         HomePageSteps homePageStepsObj = new HomePageSteps();
         ManageRequestsTabComponents manageRequestsTabComponentsObj = new ManageRequestsTabComponents();
@@ -17,7 +17,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         ManageReceivedRequestSteps manageReceivedRequestStepsObj = new ManageReceivedRequestSteps();
 
 
-        private ExtentTest testreport;
+        
 
         [Then(@"User navigate to manage requests tab")]
         public void ThenUserNavigateToManageRequestsTab()

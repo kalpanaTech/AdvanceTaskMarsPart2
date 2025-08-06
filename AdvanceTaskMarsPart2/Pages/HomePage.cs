@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class HomePage : Hooks
+    public class HomePage : Base
     {
 
         private static readonly By userCheckingLocator = By.XPath("//*[@id='account-profile-section']/div/div[1]/div[2]/div/span");

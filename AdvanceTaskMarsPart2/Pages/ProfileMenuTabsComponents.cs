@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class ProfileMenuTabsComponents : Hooks
+    public class ProfileMenuTabsComponents : Base
     {
         private static readonly By languagesTabLocator = By.XPath("//A[@class='item active'][text()='Languages']");
         private static readonly By skillsTabLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]");

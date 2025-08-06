@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Steps;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Steps;
 using AdvanceTaskMarsPart2.Utilities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class ManageSentRequestAssertions : Hooks
+    public class ManageSentRequestAssertions : Base
     {
         private static string WithdrawSentRequestMessage = "Request has been withdrawn";
         private static string ReviewSentRequestMessage = "Rating added, thank you!";
@@ -36,7 +37,6 @@ namespace AdvanceTaskMarsPart2.Assertions
             {
                 test.Fail("Request withdraw failed");
             }
-
         }
         public void VerifyUpdateCompletedSentRequest()
         {
@@ -53,7 +53,6 @@ namespace AdvanceTaskMarsPart2.Assertions
             {
                 test.Fail("Request completion failed");
             }
-
         }
         public void VerifyReviewSentRequests()
         {
@@ -69,7 +68,6 @@ namespace AdvanceTaskMarsPart2.Assertions
             {
                 test.Fail("Request review and rating failed");
             }
-
         }
         public void VerifyViewDeclinedSentRequests()
         {

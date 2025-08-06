@@ -1,4 +1,5 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Steps;
 using AdvanceTaskMarsPart2.Utilities;
@@ -9,7 +10,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class DescriptionFeatureStepDefinitions
+    public class DescriptionFeatureStepDefinitions : Base
     {
         HomePageSteps homePageStepsObj = new HomePageSteps();
         DescriptionSteps descriptionStepsObj = new DescriptionSteps();

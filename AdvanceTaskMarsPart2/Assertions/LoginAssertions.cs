@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Pages;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.TestModel;
 using AdvanceTaskMarsPart2.Utilities;
 using NUnit.Framework;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class LoginAssertions : Hooks
+    public class LoginAssertions : Base
     {
         HomePage homePageObj = new HomePage();
         LoginComponent loginComponentObj = new LoginComponent();

@@ -1,4 +1,5 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Steps;
@@ -12,7 +13,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class CertificationFeatureStepDefinitions : Hooks
+    public class CertificationFeatureStepDefinitions : Base
     {
         ProfileMenuTabsComponents profileMenuTabsComponentsObj = new ProfileMenuTabsComponents();
         HomePageSteps homePageStepsObj = new HomePageSteps();
@@ -23,7 +24,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         private List<CertificationCredentials> testData = new List<CertificationCredentials>();
         private List<CertificationCredentials> deleteTestData = new List<CertificationCredentials>();
 
-        private ExtentTest testreport;
+      
 
         [Then(@"User navigate to certification tab")]
         public void ThenUserNavigateToCertificationTab()

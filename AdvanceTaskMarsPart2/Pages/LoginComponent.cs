@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.TestModel;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.TestModel;
 using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class LoginComponent : Hooks
+    public class LoginComponent : Base
     {
         
         private static readonly By emailTextboxLocator = By.XPath("//*[@placeholder='Email address']");

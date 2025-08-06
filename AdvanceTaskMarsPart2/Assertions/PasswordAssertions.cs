@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Pages;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Utilities;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class PasswordAssertions : Hooks
+    public class PasswordAssertions : Base
     {
        
         private static string PasswordChangeSuccessMessage = "Password Changed Successfully";

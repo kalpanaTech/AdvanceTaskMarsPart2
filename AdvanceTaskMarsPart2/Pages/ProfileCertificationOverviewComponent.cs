@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Model;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    
-    public class ProfileCertificationOverviewComponent : Hooks
+
+    public class ProfileCertificationOverviewComponent : Base
     {
         private static readonly By addNewCertificationButtonLocator = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div");
         private static readonly By certificateTextBoxLocator = By.XPath("//input[@type = 'text' and @placeholder = 'Certificate or Award' and @name = 'certificationName']");

@@ -1,4 +1,5 @@
 using AdvanceTaskMarsPart2.Assertions;
+using AdvanceTaskMarsPart2.Hooks;
 using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Pages;
 using AdvanceTaskMarsPart2.Steps;
@@ -11,7 +12,7 @@ using TechTalk.SpecFlow;
 namespace AdvanceTaskMarsPart2.StepDefinitions
 {
     [Binding]
-    public class PasswordFeatureStepDefinitions : Hooks
+    public class PasswordFeatureStepDefinitions : Base
     {
         HomePageSteps homePageStepsObj = new HomePageSteps();
         UserTabComponents userTabComponentsObj = new UserTabComponents();
@@ -21,7 +22,6 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         private List<ChangePasswordCredentials> passwordTestData = new List<ChangePasswordCredentials>();
 
 
-        private ExtentTest testreport;
 
         [Then(@"User navigate to change password option")]
         public void ThenUserNavigateToChangePasswordOption()

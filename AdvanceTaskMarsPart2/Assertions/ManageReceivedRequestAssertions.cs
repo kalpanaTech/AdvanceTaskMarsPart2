@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Steps;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Steps;
 using AdvanceTaskMarsPart2.Utilities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class ManageReceivedRequestAssertions : Hooks
+    public class ManageReceivedRequestAssertions : Base
     {
         private static string AcceptManageReceivedRequestMessage = "Service has been updated";
         private static string DeclineManageReceivedRequestMessage = "Service has been updated";

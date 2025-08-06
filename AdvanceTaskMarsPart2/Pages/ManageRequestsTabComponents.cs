@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class ManageRequestsTabComponents : Hooks
+    public class ManageRequestsTabComponents : Base
     {
         private static readonly By receivedRequestsLocator = By.XPath("//a[normalize-space()='Received Requests']");
         private static readonly By sentRequestsLocator = By.XPath("//a[normalize-space()='Sent Requests']");

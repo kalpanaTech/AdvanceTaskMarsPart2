@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Model;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Utilities;
 using AventStack.ExtentReports.Gherkin.Model;
 using OpenQA.Selenium;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class ManageSentRequestComponents : Hooks
+    public class ManageSentRequestComponents : Base
     {
         private static readonly By sentRequestStatusLocator = By.XPath("//*[@id=\"sent-request-section\"]/div[2]/div[1]/table/tbody/tr[1]/td[5]");
         private static readonly By sentRequestWithdrawButtonLocator = By.XPath("//*[@id=\"sent-request-section\"]/div[2]/div[1]/table/tbody/tr[1]/td[8]/button");

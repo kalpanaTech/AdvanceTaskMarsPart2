@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Process
 {
-    public class LoginSteps : Hooks
+    public class LoginSteps
     {
 
         LoginComponent loginComponentObj = new LoginComponent();

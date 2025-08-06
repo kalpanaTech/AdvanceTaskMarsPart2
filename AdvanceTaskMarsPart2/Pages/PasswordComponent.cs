@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
+using AdvanceTaskMarsPart2.Hooks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class PasswordComponent : Hooks
+    public class PasswordComponent : Base
     {
         private static readonly By currentPasswordTextBoxLocator = By.XPath("//input[@name='oldPassword']");
         private static readonly By newPasswordTextBoxLocator = By.XPath("//input[@name='newPassword']");

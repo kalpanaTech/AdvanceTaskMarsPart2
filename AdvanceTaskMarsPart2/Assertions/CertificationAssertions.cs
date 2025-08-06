@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Model;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Model;
 using AdvanceTaskMarsPart2.Utilities;
 using AventStack.ExtentReports;
 using CompetionTaskMars.Model;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class CertificationAssertions : Hooks
+    public class CertificationAssertions : Base
     {
 
         private static readonly By cancelButtonLocator = By.XPath("//input[@value='Cancel']");

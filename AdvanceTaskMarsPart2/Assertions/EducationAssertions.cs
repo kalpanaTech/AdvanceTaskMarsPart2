@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using AventStack.ExtentReports;
 using CompetionTaskMars.Model;
 using NUnit.Framework;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Assertions
 {
-    public class EducationAssertions : Hooks
+    public class EducationAssertions : Base
     {
         
         private static readonly By cancelButtonLocator = By.XPath("//input[@value='Cancel']");

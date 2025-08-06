@@ -1,4 +1,5 @@
-﻿using AdvanceTaskMarsPart2.Utilities;
+﻿using AdvanceTaskMarsPart2.Hooks;
+using AdvanceTaskMarsPart2.Utilities;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvanceTaskMarsPart2.Pages
 {
-    public class UserTabComponents : Hooks
+    public class UserTabComponents : Base
     {
         private static readonly By goToProfileLocator = By.XPath("//a[normalize-space()='Go to Profile']");
         private static readonly By changePasswordLocator = By.XPath("//a[normalize-space()='Change Password']");
