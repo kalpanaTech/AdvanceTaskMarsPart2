@@ -16,18 +16,18 @@ namespace AdvanceTaskMarsPart2.Utilities
     {
         public static IWebDriver driver;
 
-        private static ExtentReports extent;
-        private static ExtentTest feature;
-        private static ExtentTest scenario;
-        private static ExtentSparkReporter htmlReporter;
-        private static ExtentTest test;
+        public static ExtentReports extent;
+        public static ExtentTest feature;
+        //public static ExtentTest scenario;
+        //public static ExtentSparkReporter htmlReporter;
+        public static ExtentTest test;
         
 
         [BeforeTestRun]
         public static void InitializeReport()
         {
             var reportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reports", "ExtentReport.html");
-            htmlReporter = new ExtentSparkReporter(reportPath);
+            var htmlReporter = new ExtentSparkReporter(reportPath);
 
             extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
@@ -58,8 +58,8 @@ namespace AdvanceTaskMarsPart2.Utilities
         [BeforeScenario]
         public void BeforeScenario(ScenarioContext scenarioContext)
         {
-            scenario = feature.CreateNode(scenarioContext.ScenarioInfo.Title);
-            ReportManager.SetTest(scenario);
+            test = feature.CreateNode(scenarioContext.ScenarioInfo.Title);
+            ReportManager.SetTest(test);
           
         }
 
@@ -83,16 +83,16 @@ namespace AdvanceTaskMarsPart2.Utilities
                     string screenshotPath = Path.Combine(screenshotDirectory, screenshotFile);
 
                     screenshot.SaveAsFile(screenshotPath);
-                    scenario.Fail("Test failed").AddScreenCaptureFromPath(screenshotPath);
+                    test.Fail("Test failed").AddScreenCaptureFromPath(screenshotPath);
                 }
                 catch (Exception ex)
                 {
-                    scenario.Fail("Failed to capture screenshot: " + ex.Message);
+                    test.Fail("Failed to capture screenshot: " + ex.Message);
                 }
             }
             else
             {
-                scenario.Pass("Test passed");
+                test.Pass("Test passed");
             }
         }
     }

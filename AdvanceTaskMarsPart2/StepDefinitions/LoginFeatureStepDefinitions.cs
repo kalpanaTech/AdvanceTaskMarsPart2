@@ -16,7 +16,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         private LoginSteps loginStepsObj = new LoginSteps();
         private LoginAssertions loginAssertionsObj = new LoginAssertions();
 
-        private ExtentTest testreport;
+        //private ExtentTest testreport;
 
         [Given(@"User is on the login page")]
         public void GivenUserIsOnTheLoginPage()
