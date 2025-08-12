@@ -20,7 +20,7 @@ namespace AdvanceTaskMarsPart2.StepDefinitions
         EducationSteps educationStepsObj = new EducationSteps();
         EducationAssertions educationAssertionsObj = new EducationAssertions();
 
-        private ExtentTest testreport;
+       
 
         [Then(@"User navigate to education tab")]
         public void ThenUserNavigateToEducationTab()

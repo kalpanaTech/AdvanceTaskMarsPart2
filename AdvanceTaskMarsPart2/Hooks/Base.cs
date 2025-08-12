@@ -13,8 +13,6 @@ namespace AdvanceTaskMarsPart2.Hooks
     public class Base
     {
         public static IWebDriver driver;
-        //private static ExtentReports extent;
-        //private static ExtentTest testreport;
 
         [SetUp]
         public void SetupAuction()

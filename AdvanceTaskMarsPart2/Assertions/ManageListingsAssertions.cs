@@ -53,10 +53,8 @@ namespace AdvanceTaskMarsPart2.Assertions
         {
             var test = ReportManager.GetTest();
 
-            // Build the expected toast message dynamically using the title
             string deleteManageListingsMessage = ManageListingsSteps.expectedTitle + " has been deleted";
 
-            // Get the displayed toast message
             string displayedMessage = ToastMessageHelper.VerifyToastMessage(driver, deleteManageListingsMessage);
 
             if (displayedMessage == deleteManageListingsMessage)
